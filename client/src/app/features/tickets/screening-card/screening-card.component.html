@@ -1,0 +1,9 @@
+<div class="card m-2" style="width: 18rem;">
+    <img class="card-img-top" src="{{screening.media.coverUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title text-capitalize">{{screening.media.title}}</h2>
+      <h4 class="card-text">Screening time: {{screening.startTime | date: 'dd.mm.yyyy hh:mm'}}</h4>
+      <h1>{{screening.price}}$</h1>
+      <a class="btn btn-success" (click)="buyTicket()">Buy ticket</a>
+    </div>
+  </div>

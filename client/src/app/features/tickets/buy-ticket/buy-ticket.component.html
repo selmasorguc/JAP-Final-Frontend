@@ -1,0 +1,9 @@
+<div class="container m-5">
+    <h1>Buy a ticket</h1>
+    <div class="row">
+        <div class="col" *ngFor="let screening of screenings">
+            <app-screening-card [screening]="screening"></app-screening-card>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

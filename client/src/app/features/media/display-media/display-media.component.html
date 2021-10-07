@@ -1,0 +1,15 @@
+
+<app-search-list (searchActive) = "isSearching($event)"></app-search-list>
+<!-- Tabs -->
+<div class="container mt-5 mb-5" *ngIf="!searchActive">
+    <tabset type="pills" [justified]="true">
+        <!-- Movie Tab -->
+        <tab heading="Movies" id="tab1">
+            <app-movies></app-movies>
+        </tab>
+        <!-- TV Shows Tab -->
+        <tab heading="TV Shows" id="tab2">
+            <app-tv-shows></app-tv-shows>
+        </tab>
+    </tabset>
+</div>

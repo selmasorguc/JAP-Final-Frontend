@@ -1,0 +1,17 @@
+input {
+  margin-bottom: 10px;
+  height: 3rem;
+  color: aliceblue !important;
+  border-radius: 10px;
+  display: block;
+}
+ngb-datepicker {
+    color:black !important;
+    color: aliceblue !important;
+    background-color: #222;
+    margin-bottom: 10px;
+}
+
+button, label {
+    display: block;
+}
