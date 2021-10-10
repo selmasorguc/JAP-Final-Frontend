@@ -14,7 +14,7 @@ VS Code
 
 - To be able to fetch the movie and tv show data please download the MovieApp Api from this Git Repo
 
-https://github.com/selmasorguc/MovieApp-Backend-Refactoring
+https://github.com/selmasorguc/JAP-Final-Backend
 
 
 - After you set up and run the Api (more info in the readme file of MovieApp Api on how to run the project), open this repo in VS Code.
