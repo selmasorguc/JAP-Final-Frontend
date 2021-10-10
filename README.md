@@ -1,7 +1,7 @@
 # JAP Final task
-## Movie App Front end
-
 ![Screenshot_14](https://user-images.githubusercontent.com/89447689/136708156-35a30d9c-0cf2-457a-85b7-20bca2969786.png)
+
+## Movie App Front end
 
 ### What is this project about?
 
