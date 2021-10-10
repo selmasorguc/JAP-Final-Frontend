@@ -9,9 +9,9 @@ This is a small Angular application that uses JAP Movie App Api to show a feed o
 Users are able to search through the movies and tv shows by title, description, rating, and release year. 
 A log in is provided for two main user roles: regular user and admin. Both users can buy tickets for movie screenings. Admin is provided with admin panel page where they are able to add new movies, edit old ones and add screenings.
 
-## Technologies and frameworks
-Angular 
-VS Code
+### Technologies and frameworks
+- Angular 
+- VS Code
 
 ![Screenshot_15](https://user-images.githubusercontent.com/89447689/136708161-98660870-45a5-49c3-9669-453034ed8c84.png)
 
