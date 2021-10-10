@@ -1,17 +1,12 @@
 import { Actor } from "./actor";
 import { MediaType } from "./mediaType";
-import { Rating } from "./rating";
 
-export class Media {
-    id: number;
+export class AddMedia {
     title: string;
     coverUrl: string;
-    releaseDate: Date;
+    releaseDate: string;
     description: string;
-    ratings: Rating[];
-    cast: Actor[];
     mediaType: MediaType;
-  }
+    cast: Actor[];
+}
 
-
-  

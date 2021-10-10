@@ -1,8 +1,12 @@
-.movie-text
-{
-  color: orange;
+.movie-text {
+  color: #5ba4d5;
 }
-.tvshow-text
-{
-  color: orangered;
+.tvshow-text {
+  color: #398984;
 }
+.btn-edit{
+  color: white;
+  background-color: #7a78ac;
+  border: none;
+}
+

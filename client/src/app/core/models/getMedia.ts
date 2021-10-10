@@ -1,6 +1,6 @@
 import { MediaType } from "./mediaType";
 
-export interface GetMedia {
+export class GetMedia {
     page: number | undefined;
     itemsPerPage: number | undefined;
     mediaType: MediaType | undefined;

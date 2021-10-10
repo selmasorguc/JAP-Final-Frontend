@@ -1,11 +1,12 @@
 import { ServiceResponse } from '../models/serviceResponse';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GetMedia } from '../models/getMedia';
 import { Media } from '../models/media';
 import { Rating } from '../models/rating';
 import { environment } from 'src/environments/environment';
+import { AddMedia } from '../models/addMedia';
 
 
 @Injectable({
@@ -46,5 +47,19 @@ export class MediaService {
 
   eidMedia(media: Media) {
     return this.http.put<ServiceResponse<Media>>(this.baseUrl + "media/", media);
+  }
+
+  addMedia(media: AddMedia) {
+    let headers = this.declareAuthHeader();
+    return this.http.post<ServiceResponse<AddMedia>>(this.baseUrl + "media", media,
+    {headers: headers});
+  }
+
+  declareAuthHeader() {
+    let headers = new HttpHeaders();
+    var jwtToken = JSON.parse(localStorage.getItem('user')).token;
+    const authroizationToken = 'bearer '.concat(jwtToken);
+    headers = headers.append('Authorization', authroizationToken);
+    return headers;
   }
 }

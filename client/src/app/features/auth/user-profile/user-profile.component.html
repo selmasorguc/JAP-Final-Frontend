@@ -7,7 +7,7 @@
                     alt="userProfile">
                 <div class="card-body">
                     <h1>{{this.userService.getCurrentUsername()}}</h1>
-                    <h3>User role</h3>
+                    <h3>{{this.userService.getCurrentRole()}}</h3>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <h1>Bought tickets</h1>
             <div class="card mb-2 w-75" *ngFor="let ticket of tickets">
                 <div class="card-body">
-                    <h2 class="card-title">Ticket for <span class="font-weight-bold">{{ticket.media.title}}</span></h2>
+                    <h2 class="card-title">Ticket for <span class="text-uppercase">{{ticket.media.title}}</span></h2>
                     <h3>Ticket bought on {{ticket.dateOfPurchase | date}}</h3>
                     <hr>
                     <p class="card-text">Screening: {{ticket.screening.startTime | date}}</p>

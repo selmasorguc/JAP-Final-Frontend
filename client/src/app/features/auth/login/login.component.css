@@ -17,4 +17,5 @@ input{
     margin-bottom: 10px;
     border: 3px solid #5ba4d5;
     border-radius: 25px;
+    color: white !important;
 }

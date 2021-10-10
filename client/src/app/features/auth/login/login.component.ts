@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       this.user = JSON.parse(this.userService.getCurrentUser());
       this.router.navigateByUrl('/');
+    }, () =>{
+      this.toastr.error("Username or password incorrect.", "Try again");
     });
   }
 }

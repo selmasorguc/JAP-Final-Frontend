@@ -11,6 +11,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { MediaModule } from './features/media/media.module';
 import { TicketModule } from './features/tickets/ticket.module';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 
 
@@ -31,7 +32,8 @@ import { TicketModule } from './features/tickets/ticket.module';
     RatingModule.forRoot(),
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -32,6 +32,5 @@ export class AdminAreaComponent implements OnInit {
     this.moviesService.getMedia(this.getMediaParams).subscribe((response) => {
       this.media = response;
     });
-
   }
 }

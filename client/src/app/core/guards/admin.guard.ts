@@ -14,10 +14,11 @@ export class AdminGuard implements CanActivate {
   canActivate(): Observable<boolean> {
     return this.userService.currentUser$.pipe(
       map(user => {
-        if (user.roles.includes('Admin')) {
+        if (user.role.includes('Admin')) {
           return true;
         }
         this.toastr.error('You cannot enter this area');
+        return false;
       })
     )
   }

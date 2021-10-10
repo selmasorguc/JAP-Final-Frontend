@@ -1,10 +1,10 @@
 <div class="container mt-5">
-    <h1 class="mt-5 text-center mt-4">Edit media with id: {{media.id}}</h1>
+    <h1 class="mt-5 text-center mt-4">Add new media</h1>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col">
-            <form [formGroup]="mediaEditFrom" (ngSubmit)="editMedia()">
-                <alert type="danger" *ngIf="!(mediaEditFrom.valid) && mediaEditFrom.touched">
+            <form [formGroup]="addMediaForm" (ngSubmit)="addNewMedia()">
+                <alert type="danger" *ngIf="!(addMediaForm.valid) && addMediaForm.touched">
                     <strong>Oh snap!</strong> Change a few things up because media data is not valid.
                 </alert>
 
@@ -28,7 +28,6 @@
 
                 <label for="releaseDate" class="mt-3">Release date: </label>
                 <input type="text" class="form-control date-picker" formControlName="releaseDate"
-                    [bsConfig]="{ isAnimated: true }"
                     [class.is-invalid]='control("releaseDate")?.errors && control("releaseDate").touched' bsDatepicker
                     required>
                 <div class="invalid-feedback">
@@ -44,7 +43,7 @@
                     <span> TvShow</span>
                 </label>
 
-                <button type="submit" class="btn btn-success mt-4" [disabled]="mediaEditFrom.invalid">Save</button>
+                <button type="submit" class="btn btn-success mt-4" [disabled]="addMediaForm.invalid">Add media</button>
             </form>
         </div>
         <div class="col-md-2"></div>

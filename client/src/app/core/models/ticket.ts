@@ -2,7 +2,7 @@ import { Media } from "./media";
 import { Screening } from "./screening";
 import { User } from "./user";
 
-export interface Ticket {
+export class Ticket {
     screeningId: number;
     screening: Screening;
     mediaId:number;

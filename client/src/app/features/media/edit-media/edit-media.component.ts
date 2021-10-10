@@ -1,5 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment';
@@ -13,11 +13,10 @@ import { MediaService } from 'src/app/core/services/media.service';
   styleUrls: ['./edit-media.component.css']
 })
 export class EditMediaComponent implements OnInit {
-  @Input() media!: Media;
+  media: Media = new Media();
   private subscribeRoute: any;
   id: number;
   mediaEditFrom: FormGroup;
-  date: NgbDateStruct;
   @HostListener('window:beforeunload', ['$event']) unloadNotification($event: any) {
     if (this.mediaEditFrom.dirty) {
       $event.returnValue = true;
@@ -28,20 +27,25 @@ export class EditMediaComponent implements OnInit {
     private route: ActivatedRoute, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
-    this.formSetUp();
     this.getMedia();
+    this.initializeForm();
   }
 
-  formSetUp() {
+  initializeForm() {
     this.mediaEditFrom = new FormGroup({
-      'title': new FormControl(null),
-      'description': new FormControl(null),
-      'releaseDate': new FormControl(null)
+      title: new FormControl(this.media.title, [Validators.required]),
+      description: new FormControl(this.media.description, [Validators.required]),
+      releaseDate: new FormControl(null, [Validators.required]),
+      coverUrl: new FormControl(this.media.coverUrl),
+      mediaType: new FormControl(this.media.mediaType, [Validators.required]),
     });
   }
 
   ngOnDestroy() {
     this.subscribeRoute.unsubscribe();
+  }
+  control(controlName: string) {
+    return this.mediaEditFrom.get(controlName);
   }
 
   getMedia() {
@@ -52,14 +56,14 @@ export class EditMediaComponent implements OnInit {
 
       this.mediaService.getSingleMedia(this.id).subscribe(response => {
         this.media = response.data;
-        let parsedDate = moment(this.mediaEditFrom.value.releaseDate, "YYYY-MM-DD");
-        let outputDate = parsedDate.format("YYYY-MM-DD");
+        let releaseDate = new Date(this.media.releaseDate);
         this.mediaEditFrom.patchValue({
           title: this.media.title,
           description: this.media.description,
-          releaseDate: this.media.releaseDate
+          releaseDate: releaseDate,
+          coverUrl: this.media.coverUrl,
+          mediaType: this.media.mediaType
         });
-        this.mediaEditFrom.reset;
       });
     }
   }
@@ -78,5 +82,7 @@ export class EditMediaComponent implements OnInit {
     this.media.title = this.mediaEditFrom.value.title;
     this.media.description = this.mediaEditFrom.value.description;
     this.media.releaseDate = this.mediaEditFrom.value.releaseDate;
+    this.media.coverUrl = this.mediaEditFrom.value.coverUrl;
+    this.media.mediaType = this.mediaEditFrom.value.mediaType;
   }
 }

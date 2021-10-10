@@ -1,5 +1,5 @@
 
-export interface Rating {
+export class Rating {
     value: number;
     mediaId: number;
   }

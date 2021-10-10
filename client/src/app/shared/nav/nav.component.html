@@ -16,8 +16,10 @@
       <a routerLink='/profile' class="dropdown-item">Profile</a>
       <div class="dropdown-divider"></div>
       <a routerLink='/ticket/buy' class="dropdown-item">Buy a ticket</a>
-      <a routerLink='/adminArea' class="dropdown-item">Admin area</a>
       <div class="dropdown-divider"></div>
+      <a routerLink='/adminArea' class="dropdown-item" *ngIf="userService.getCurrentRole() === 'Admin'">Admin area</a>
+      <div class="dropdown-divider" *ngIf="userService.getCurrentRole() === 'Admin'"></div>
+      <a class="dropdown-item" (click)="userService.logout()">Log out</a>
     </div>
   </div>
 </nav>

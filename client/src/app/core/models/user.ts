@@ -1,7 +1,7 @@
 import { Ticket } from "./ticket";
 
-export interface User {
+export class User {
     username: string;
     token: string;
-    roles: string[];
+    role: string;
   }

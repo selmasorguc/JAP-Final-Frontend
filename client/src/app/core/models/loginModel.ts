@@ -1,5 +1,5 @@
 
-export interface LogInModel {
+export class LogInModel {
     username: string;
     token: string;
   }

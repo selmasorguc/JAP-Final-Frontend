@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -14,34 +15,55 @@ export class UserService {
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   login(model: any) {
     return this.http.post(this.baseUrl + 'users/login', model).pipe(
-      map((response: ServiceResponse<User>) => { 
+      map((response: ServiceResponse<User>) => {
         const user = response.data;
-        if (user){
+        if (user) {
           localStorage.setItem('user', JSON.stringify(user));
-          this.currentUserSource.next(user);
+          this.setCurrentUser(user);
         }
       })
     );
   }
 
-  setCurrentUser(user: User){
+  setCurrentUser(user: User) {
+    user.role = this.getDecodedToken().role;
     this.currentUserSource.next(user);
   }
 
-  getCurrentUser(){
+  getCurrentRole() {
+    var user = localStorage.getItem('user');
+    if (user) 
+      return this.getDecodedToken().role;
+  }
+
+  getCurrentUser() {
     return localStorage.getItem('user');
   }
 
-  getCurrentUsername(){ 
-    return JSON.parse(localStorage.getItem('user')).username;
+  getDecodedToken() {
+    var user = localStorage.getItem('user');
+    if (user) {
+      var token = JSON.parse(localStorage.getItem('user')).token;
+      return JSON.parse(atob(token.split('.')[1]));
+    }
+    return null;
   }
-  
-  logout(){
+
+  getCurrentUsername() {
+    var user = localStorage.getItem('user');
+    if (user)
+      return JSON.parse(localStorage.getItem('user')).username;
+
+    return null;
+  }
+
+  logout() {
     localStorage.removeItem('user');
     this.currentUserSource.next(null);
+    this.router.navigate(["/login"]);
   }
 }
