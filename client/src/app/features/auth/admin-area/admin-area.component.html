@@ -23,10 +23,13 @@
                   }">{{item.mediaType}}</td>
                 <td>{{item.releaseDate | date:'yyyy-MM-dd'}}</td>
                 <td>
-                    <button class="btn btn-sm btn-warning btn-edit"  [routerLink]="['media/edit/', item.id]">Edit</button>
+                    <button class="btn btn-sm btn-warning btn-edit"
+                        [routerLink]="['media/edit/', item.id]">Edit</button>
                 </td>
                 <td>
-                    <button class="btn btn-sm btn-warning btn-edit"  [routerLink]="['screening/add/', item.id]">New screening</button>
+                    <button class="btn btn-sm btn-warning btn-edit" [routerLink]="['screening/add/', item.id]">
+                        New screening
+                    </button>
                 </td>
             </tr>
         </tbody>

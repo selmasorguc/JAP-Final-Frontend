@@ -14,12 +14,12 @@ import { AddMediaComponent } from './features/media/add-media/add-media.componen
 import { AdminGuard } from './core/guards/admin.guard';
 const routes: Routes = [
   { path: '', component: DisplayMediaComponent },
-  { path: 'not-found', component: NotFoundComponent},
+  { path: 'not-found', component: NotFoundComponent },
   { path: 'server-error', component: ServerErrorComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'adminArea/media/edit/:id', component: EditMediaComponent , canActivate: [AuthGuard, AdminGuard]},
-  { path: 'adminArea/media/add', component: AddMediaComponent, canActivate: [AuthGuard, AdminGuard]},
-  { path: 'adminArea/screening/add/:id', component: AddScreeningComponent, canActivate: [AuthGuard, AdminGuard]},
+  { path: 'adminArea/media/edit/:id', component: EditMediaComponent, canActivate: [AuthGuard, AdminGuard] },
+  { path: 'adminArea/media/add', component: AddMediaComponent, canActivate: [AuthGuard, AdminGuard] },
+  { path: 'adminArea/screening/add/:id', component: AddScreeningComponent, canActivate: [AuthGuard, AdminGuard] },
   { path: 'adminArea', component: AdminAreaComponent, canActivate: [AuthGuard, AdminGuard] },
   { path: 'ticket/buy', component: BuyTicketComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard] },

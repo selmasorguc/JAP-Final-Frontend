@@ -32,7 +32,8 @@
                     <label for="address">Screening address</label>
                     <select class="form-control form-field select" formControlName="address" required>
                         <option *ngFor="let address of addresses" value="{{address.id}}">
-                            {{address.street}} {{address.homeNumber}}, {{address.postalCode}}, {{address.city}}, {{address.country}}
+                            {{address.street}} {{address.homeNumber}}, {{address.postalCode}}, {{address.city}},
+                            {{address.country}}
                         </option>
                     </select>
                 </div>

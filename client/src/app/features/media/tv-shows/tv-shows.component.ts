@@ -21,7 +21,7 @@ export class TvShowsComponent implements OnInit {
   };
 
   constructor(private moviesService: MediaService,
-    private toastr: ToastrService) { }
+              private toastr: ToastrService) { }
 
   ngOnInit(): void { this.loadTVShows(); }
 

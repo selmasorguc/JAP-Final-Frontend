@@ -1,5 +1,4 @@
-
-<app-search-list (searchActive) = "isSearching($event)"></app-search-list>
+<app-search-list (searchActive)="isSearching($event)"></app-search-list>
 <!-- Tabs -->
 <div class="container mt-5 mb-5" *ngIf="!searchActive">
     <tabset type="pills" [justified]="true">

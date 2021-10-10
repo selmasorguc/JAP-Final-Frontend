@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class DisplayMediaComponent {
- 
+
   searchActive: boolean = false;
-  
+
   isSearching(data: any) {
     this.searchActive = data;
   }

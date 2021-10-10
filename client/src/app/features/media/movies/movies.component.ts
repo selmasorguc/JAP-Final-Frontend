@@ -16,7 +16,7 @@ export class MoviesComponent implements OnInit {
   loadMoviesButton: boolean = true;
 
   constructor(private moviesService: MediaService,
-    private toastr: ToastrService) { }
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.loadMovies();
@@ -28,7 +28,6 @@ export class MoviesComponent implements OnInit {
       this.getMoviesParams.page++;
     });
   }
-
 
   loadMoreMovies() {
     this.moviesService.getMedia(this.getMoviesParams).subscribe((response) => {

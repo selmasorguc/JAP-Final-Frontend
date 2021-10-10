@@ -1,11 +1,11 @@
 <div class="container">
-    <div  class="row mt-4 mb-4">
-        <div *ngFor="let tvshow of tvshows"  class="col-lg-6 mb-4">
+    <div class="row mt-4 mb-4">
+        <div *ngFor="let tvshow of tvshows" class="col-lg-6 mb-4">
             <app-media-card [movie]="tvshow"></app-media-card>
         </div>
     </div>
- </div>
- <div class="container">
+</div>
+<div class="container">
     <div class="col-md-12 text-center mb-4">
         <button type="button" class="btn btn-outline-light mb-5" *ngIf="loadTVShowsButton" type="button"
             (click)="loadMoreTVShows()">Load More</button>

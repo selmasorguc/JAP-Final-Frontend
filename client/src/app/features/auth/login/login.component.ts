@@ -18,15 +18,15 @@ export class LoginComponent implements OnInit {
   user: User;
   loginForm: FormGroup;
 
-  constructor(private userService: UserService, 
+  constructor(private userService: UserService,
               private toastr: ToastrService,
               private router: Router) { }
 
   ngOnInit(): void {
-   this.loginForm = new FormGroup({
-     'username' : new FormControl(null),
-     'password' : new FormControl(null)
-   });
+    this.loginForm = new FormGroup({
+      'username': new FormControl(null),
+      'password': new FormControl(null)
+    });
   }
 
   login() {
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       this.user = JSON.parse(this.userService.getCurrentUser());
       this.router.navigateByUrl('/');
-    }, () =>{
+    }, () => {
       this.toastr.error("Username or password incorrect.", "Try again");
     });
   }

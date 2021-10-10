@@ -17,16 +17,16 @@ export class MediaCardComponent implements OnInit {
   max = 5;
   isReadonly = false;
 
-  constructor(private mediaService: MediaService, private toastr: ToastrService,
-    private spinner: NgxSpinnerService) {
+  constructor(private mediaService: MediaService, 
+              private toastr: ToastrService,
+              private spinner: NgxSpinnerService) {
   }
 
-  
   ngOnInit(): void {
     this.mediaService.getCurrentAverageRating(this.movie.id).subscribe(
       (response: ServiceResponse<number>) => {
-      this.rate = response.data;
-    });
+        this.rate = response.data;
+      });
   }
 
   addRating($event: any) {
@@ -41,7 +41,7 @@ export class MediaCardComponent implements OnInit {
           tapToDismiss: true,
           closeButton: true
         });
-      
+
       this.spinner.show();
 
       setTimeout(() => {
@@ -50,5 +50,4 @@ export class MediaCardComponent implements OnInit {
       }, 1300);
     })
   }
-
 }

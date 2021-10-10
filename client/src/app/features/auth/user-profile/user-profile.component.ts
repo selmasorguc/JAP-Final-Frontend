@@ -10,15 +10,14 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class UserProfileComponent implements OnInit {
   tickets: Ticket[] = [];
-  constructor(private ticketService: TicketService, public userService: UserService) { }
+  constructor(private ticketService: TicketService, 
+              public userService: UserService) { }
 
   ngOnInit(): void {
     this.ticketService.getUserTickets(this.userService.getCurrentUsername()).subscribe(
-      (response: any) =>{
+      (response: any) => {
         this.tickets = response.data;
       }
     );
-
   }
-
 }

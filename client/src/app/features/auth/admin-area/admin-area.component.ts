@@ -12,7 +12,7 @@ import { MediaService } from 'src/app/core/services/media.service';
 export class AdminAreaComponent implements OnInit {
   media: Media[] = [];
   getMediaParams: GetMedia = { page: 1, itemsPerPage: 20, mediaType: null, searchQuery: null };
-  loadMoviesButton: boolean = true; 
+  loadMoviesButton: boolean = true;
   rotate = true;
   maxSize = 3;
   constructor(private moviesService: MediaService) { }
@@ -26,7 +26,7 @@ export class AdminAreaComponent implements OnInit {
       this.media = response;
     });
   }
-  
+
   pageChanged(event: PageChangedEvent): void {
     this.getMediaParams.page = event.page;
     this.moviesService.getMedia(this.getMediaParams).subscribe((response) => {

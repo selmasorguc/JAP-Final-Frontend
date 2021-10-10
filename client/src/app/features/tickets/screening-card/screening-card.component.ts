@@ -16,14 +16,14 @@ export class ScreeningCardComponent implements OnInit {
   buyTicketsFrom: FormGroup;
 
   constructor(private mediaService: MediaService,
-    private ticketService: TicketService,
-    private toastr: ToastrService) { }
+              private ticketService: TicketService,
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.initializeForm();
   }
 
-  buyTickets(){
+  buyTickets() {
     console.log(this.buyTicketsFrom.value.numberOfTickets);
     this.numberOfTickets = this.buyTicketsFrom.value.numberOfTickets;
     this.ticketService.addTicket(this.screening.mediaId, this.screening.id, this.numberOfTickets).subscribe(

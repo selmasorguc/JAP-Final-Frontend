@@ -8,10 +8,10 @@ input[type="text"] {
   color: aliceblue !important;
 }
 .date-picker {
-    color: aliceblue !important;
-    background-color: #222;
-    margin-bottom: 10px;
-} 
+  color: aliceblue !important;
+  background-color: #222;
+  margin-bottom: 10px;
+}
 .custom-control-label {
   display: inline;
   padding-left: 10px;

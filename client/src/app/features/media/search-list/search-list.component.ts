@@ -16,10 +16,11 @@ export class SearchListComponent implements OnInit {
     searchQuery: new FormControl()
   });
   media: Media[] = [];
-  getMediaParams: GetMedia = { page: 1, itemsPerPage: 6, mediaType: null , searchQuery: null};  
+  getMediaParams: GetMedia = { page: 1, itemsPerPage: 6, mediaType: null, searchQuery: null };
 
 
-  constructor(private searchService: SearchService, private toastr: ToastrService) { }
+  constructor(private searchService: SearchService, 
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -34,7 +35,7 @@ export class SearchListComponent implements OnInit {
       });
     }
 
-    if(searchQuery === '') {
+    if (searchQuery === '') {
       this.media = [];
       this.searchActive.emit(false);
     }

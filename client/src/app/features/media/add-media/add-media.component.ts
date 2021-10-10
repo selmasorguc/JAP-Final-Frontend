@@ -19,7 +19,7 @@ export class AddMediaComponent implements OnInit {
       $event.returnValue = true;
     }
   }
-  
+
   constructor(private mediaService: MediaService,
               private toastr: ToastrService,
               private router: Router) { }

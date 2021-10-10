@@ -24,7 +24,9 @@ export class EditMediaComponent implements OnInit {
   }
 
   constructor(private mediaService: MediaService,
-    private route: ActivatedRoute, private toastr: ToastrService, private router: Router) { }
+              private route: ActivatedRoute, 
+              private toastr: ToastrService, 
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getMedia();
