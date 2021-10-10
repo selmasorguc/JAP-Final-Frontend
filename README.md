@@ -1,5 +1,7 @@
 # JAP Final task
+
 ![Screenshot_14](https://user-images.githubusercontent.com/89447689/136708156-35a30d9c-0cf2-457a-85b7-20bca2969786.png)
+
 
 ## Movie App Front end
 
@@ -13,6 +15,8 @@ A log in is provided for two main user roles: regular user and admin. Both users
 - Angular 
 - VS Code
 
+
+
 ![Screenshot_15](https://user-images.githubusercontent.com/89447689/136708161-98660870-45a5-49c3-9669-453034ed8c84.png)
 
 ![Screenshot_16](https://user-images.githubusercontent.com/89447689/136708164-c8110fb7-6fda-4048-8df6-32c6fae9fa7b.png)
@@ -22,6 +26,8 @@ A log in is provided for two main user roles: regular user and admin. Both users
 ![Screenshot_18](https://user-images.githubusercontent.com/89447689/136708181-878567c7-68e4-422b-be7d-39ece79fe7b4.png)
 
 ![Screenshot_19](https://user-images.githubusercontent.com/89447689/136708185-1282b85f-76ae-41da-b277-dd387161ab89.png)
+
+
 
 ## How to run this app?
 
@@ -51,7 +57,13 @@ More info  on https://angular.io/guide/setup-local
 
 ###  Mockup
 
+
 ![Screenshot_12](https://user-images.githubusercontent.com/89447689/136707951-9dbc5182-cfb8-4bb2-b90f-ff8b716fd4a0.png)
+
+
+
+
+
 
 
 ![Screenshot_13](https://user-images.githubusercontent.com/89447689/136707958-f33c9ff8-6e84-4d53-a228-759b1ed1219d.png)
