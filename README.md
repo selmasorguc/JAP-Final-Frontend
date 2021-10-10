@@ -1,5 +1,8 @@
 # JAP Final task
 ## Movie App Front end
+
+![Screenshot_14](https://user-images.githubusercontent.com/89447689/136708156-35a30d9c-0cf2-457a-85b7-20bca2969786.png)
+
 ### What is this project about?
 
 This is a small Angular application that uses JAP Movie App Api to show a feed of top-rated movies and tv shows. 
@@ -9,6 +12,16 @@ A log in is provided for two main user roles: regular user and admin. Both users
 ## Technologies and frameworks
 Angular 
 VS Code
+
+![Screenshot_15](https://user-images.githubusercontent.com/89447689/136708161-98660870-45a5-49c3-9669-453034ed8c84.png)
+
+![Screenshot_16](https://user-images.githubusercontent.com/89447689/136708164-c8110fb7-6fda-4048-8df6-32c6fae9fa7b.png)
+
+![Screenshot_17](https://user-images.githubusercontent.com/89447689/136708175-8ce4281c-c162-4fc6-871d-bb52c2613e23.png)
+
+![Screenshot_18](https://user-images.githubusercontent.com/89447689/136708181-878567c7-68e4-422b-be7d-39ece79fe7b4.png)
+
+![Screenshot_19](https://user-images.githubusercontent.com/89447689/136708185-1282b85f-76ae-41da-b277-dd387161ab89.png)
 
 ## How to run this app?
 
