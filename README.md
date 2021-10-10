@@ -1,10 +1,10 @@
-# MovieApp-Frontend-Refactoring
-## What is this project about?
+# JAP Final task
+## Movie App Front end
+### What is this project about?
 
-This is an extension to JAP Task 1 Movie app project. This is a small Angular application that uses JAP Movie App Api to show a feed of top-rated movies and tv shows. 
+This is a small Angular application that uses JAP Movie App Api to show a feed of top-rated movies and tv shows. 
 Users are able to search through the movies and tv shows by title, description, rating, and release year. 
-A small login form is provided for auth log-in testing. 
-This project is meant to fix and refactor JAP Task 1 front end.
+A log in is provided for two main user roles: regular user and admin. Both users can buy tickets for movie screenings. Admin is provided with admin panel page where they are able to add new movies, edit old ones and add screenings.
 
 ## Technologies and frameworks
 Angular 
@@ -35,3 +35,10 @@ More info  on https://angular.io/guide/setup-local
 
 
 ![Screenshot_11](https://user-images.githubusercontent.com/89447689/135611489-9c84b4f5-7476-4eb5-8a50-7b9a4a209d5b.png)
+
+###  Mockup
+
+![Screenshot_12](https://user-images.githubusercontent.com/89447689/136707951-9dbc5182-cfb8-4bb2-b90f-ff8b716fd4a0.png)
+
+
+![Screenshot_13](https://user-images.githubusercontent.com/89447689/136707958-f33c9ff8-6e84-4d53-a228-759b1ed1219d.png)
