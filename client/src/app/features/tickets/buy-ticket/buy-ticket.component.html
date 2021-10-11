@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <h1>Buy a ticket</h1>
     <div class="row mt-4 mb-4">
-        <div class="col-lg-3 mb-4" *ngFor="let screening of screenings">
+        <div class="col" *ngFor="let screening of screenings">
             <app-screening-card [screening]="screening"></app-screening-card>
         </div>
     </div>
