@@ -11,7 +11,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
-import { LoginComponent } from 'src/app/features/auth/login/login.component';
 import { AppRoutingModule } from '../app-routing.module';
 
 

@@ -13,7 +13,7 @@ import { AddMediaComponent } from './add-media/add-media.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AddScreeningComponent } from './add-screening/add-screening.component';
-
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 @NgModule({
     declarations: [
@@ -32,7 +32,8 @@ import { AddScreeningComponent } from './add-screening/add-screening.component';
         RouterModule,
         BrowserAnimationsModule,
         BsDatepickerModule.forRoot() ,
-        AlertModule
+        AlertModule,
+        TimepickerModule.forRoot()
     ],
     exports: [
         MediaCardComponent, 

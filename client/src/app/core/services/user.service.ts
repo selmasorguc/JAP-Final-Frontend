@@ -30,6 +30,7 @@ export class UserService {
   }
 
   setCurrentUser(user: User) {
+    if(user == null) return;
     user.role = this.getDecodedToken().role;
     this.currentUserSource.next(user);
   }

@@ -4,6 +4,7 @@ import { Screening } from 'src/app/core/models/screening';
 import { MediaService } from 'src/app/core/services/media.service';
 import { TicketService } from 'src/app/core/services/ticket.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Media } from 'src/app/core/models/media';
 
 @Component({
   selector: 'app-screening-card',
@@ -14,9 +15,9 @@ export class ScreeningCardComponent implements OnInit {
   @Input() screening!: Screening;
   numberOfTickets: number = 1;
   buyTicketsFrom: FormGroup;
+  media: Media;
 
-  constructor(private mediaService: MediaService,
-              private ticketService: TicketService,
+  constructor(private ticketService: TicketService,
               private toastr: ToastrService) { }
 
   ngOnInit(): void {

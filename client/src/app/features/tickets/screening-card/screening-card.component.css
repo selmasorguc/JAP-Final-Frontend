@@ -3,5 +3,7 @@ select {
 }
 
 .card-title {
-  color: #5ba4d5;
+  color: #86a8e7;
+  font-size: 2em;
+  font-family: 'Alata', sans-serif;
 }

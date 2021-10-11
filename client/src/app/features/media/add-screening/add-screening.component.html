@@ -5,13 +5,14 @@
         <div class="col">
             <form [formGroup]="addScreeningForm" (ngSubmit)="addScreening()">
 
-                <label for="startTime" class="mt-3">Screening date: </label>
-                <input type="text" class="form-control date-picker" formControlName="startTime"
-                    [class.is-invalid]='control("startTime")?.errors && control("startTime").touched' [min]="minDate"
+                <label for="startDate" class="mt-3">Screening date: </label>
+                <input type="text" class="form-control date-picker" formControlName="startDate"
+                    [class.is-invalid]='control("startDate")?.errors && control("startDate").touched' [min]="minDate"
                     bsDatepicker>
                 <div class="invalid-feedback">
                     Please provide a screening date.
                 </div>
+                <timepicker class="time-picker" [formControlName]="'startTime'"></timepicker>
 
                 <label for="maxSeatsNumber" class="mt-3">Number of seats: </label>
                 <input id="maxSeatsNumber" class="form-control" type="text" formControlName="maxSeatsNumber"

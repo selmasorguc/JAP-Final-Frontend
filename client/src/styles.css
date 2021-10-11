@@ -1,6 +1,6 @@
- body {
-  min-height: 100vh;
-  background-image: linear-gradient(
+html, body{
+  height: 100%;
+  background: linear-gradient(
     to right top,
     #200614,
     #3a2033,
@@ -14,7 +14,11 @@
     #3399af,
     #319199,
     #398984
-  );
+  ) fixed;
+  font-family: 'Alata', sans-serif !important;
+}
+.form-control {
+  color: white !important;
 }
 
 .nav-pills .nav-link {

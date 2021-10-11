@@ -1,11 +1,11 @@
 <div class="card m-2" style="width: 18rem;">
   <div class="card-body">
     <h2 class="card-title text-capitalize">{{screening.media.title}}</h2>
-    <h4 class="card-text">Screening time: {{screening.startTime | date}}</h4>
+    <h4 class="card-text">{{screening.startTime | date:'long'}}</h4>
     <h1>{{screening.price}}$</h1>
     <hr>
     <form [formGroup]="buyTicketsFrom" (ngSubmit)="buyTickets()" class="mt-5">
-      <label for="numberOfTickets">Select the number of tickets</label>
+      <h3 class="text-center text-success">Select the number of tickets</h3>
       <select class="form-control mb-2" id="numberOfTickets" formControlName="numberOfTickets">
         <option>1</option>
         <option>2</option>
@@ -18,7 +18,9 @@
         <option>9</option>
         <option>10</option>
       </select>
-      <button class="btn btn-success mt-3 mb-3" type="submit">Buy</button>
+      <div class="text-center">
+        <button class="btn btn-success mt-3 mb-3" type="submit">Buy</button>
+      </div>
     </form>
   </div>
 </div>

@@ -42,6 +42,7 @@ export class AddScreeningComponent implements OnInit {
 
   initializeForm() {
     this.addScreeningForm = new FormGroup({
+      startDate: new FormControl(new Date(), [Validators.required]),
       startTime: new FormControl(new Date(), [Validators.required]),
       maxSeatsNumber: new FormControl(null, [Validators.required]),
       address: new FormControl(null, [Validators.required]),
@@ -76,5 +77,9 @@ export class AddScreeningComponent implements OnInit {
     this.screening.maxSeatsNumber = this.addScreeningForm.value.maxSeatsNumber;
     this.screening.price = this.addScreeningForm.value.price;
     this.screening.startTime = this.addScreeningForm.value.startTime;
+    this.screening.startTime.setDate(this.addScreeningForm.value.startDate.getDate());
+    this.screening.startTime.setFullYear(this.addScreeningForm.value.startDate.getFullYear());
+    this.screening.startTime.setMonth(this.addScreeningForm.value.startDate.getMonth());
+    this.screening.startTime.setSeconds(0);
   }
 }

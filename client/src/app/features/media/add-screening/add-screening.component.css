@@ -8,3 +8,13 @@ input {
 select {
   color: white !important;
 }
+
+input[type="datetime-local"]{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 40px ;
+  background-color: #222;
+}
+mat-form-field{
+  display: block;
+}
